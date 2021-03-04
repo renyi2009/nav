@@ -6,6 +6,7 @@ parcel src/index.html
 ```
 
 # build 命令
+每次修改了目录内容，请重新 `yarn build`
 ```
 yarn build
 ```
