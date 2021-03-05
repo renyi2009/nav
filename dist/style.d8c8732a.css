@@ -14,7 +14,6 @@ body{
     margin: 0;
 }
 .frosted{
-    border: 1px solid green;
     min-width: 100vw;
     min-height: 100vh;
     background:rgba(255,255,255,0.3);
@@ -110,8 +109,6 @@ body{
 }
 
 .siteList .addButton{
-    /* border: 1px solid #ddd; */
-    /* background: rgba(255,255,255,0.1); */
     width: 160px;
     display: flex;
     justify-content: center;
@@ -158,4 +155,4 @@ body{
     }
 }
 
-/*# sourceMappingURL=style.2ad52850.css.map */
+/*# sourceMappingURL=style.d8c8732a.css.map */
