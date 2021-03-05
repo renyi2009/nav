@@ -1,3 +1,4 @@
+const $site = $('.site')
 const $siteList = $('.siteList')
 const $lastList = $siteList.find('li.last')
 const x = localStorage.getItem('x')
@@ -15,9 +16,13 @@ const simplifyUrl = (url) => {
 const render = () => {
     $siteList.find('li:not(.last)').remove()
     hashMap.forEach((node, index) => {
+
+        // <div class="logo">${simplifyUrl(node.url)[0]}</div>
         const $li = $(`<li>
             <div class="site">
-                <div class="logo">${simplifyUrl(node.url)[0]}</div>
+                <div class="logo">
+                    <img style="width:24px;" src= ${JSON.stringify("https://www." + simplifyUrl(node.url) + "/favicon.ico")}> 
+                </div>
                 <div class="link">${simplifyUrl(node.url)}</div>
                 <div class='close'>
                     <svg class="icon">
@@ -26,8 +31,16 @@ const render = () => {
                 </div>
             </div>
         </li>`).insertBefore($lastList)
+        console.log('----')
+        console.log(node.url)
         $li.on('click', () => {
             window.open(node.url)
+        })
+        $li.on('mouseenter', () => {
+            $li.css("background-color", "rgba(255,255,255,0.1");
+        })
+        $li.on('mouseleave', () => {
+            $li.css("background-color", "");
         })
 
         // 删除按钮
