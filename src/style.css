@@ -14,6 +14,7 @@ body{
     margin: 0;
 }
 .frosted{
+    border: 1px solid rgba(255,255,255,0.3);
     min-width: 100vw;
     min-height: 100vh;
     background:rgba(255,255,255,0.3);
